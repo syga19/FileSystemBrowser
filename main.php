@@ -1,5 +1,5 @@
 <?php require_once 'create.php'; ?>
-
+<?php require_once 'delete.php'; ?>
 <?php 
     session_start();
     // logout logic
@@ -11,7 +11,6 @@
         print('Logged out!');
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +24,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-	
 	<div class="tableBox">
 	<h1>File System Browser</h1>
 	<br>
@@ -43,15 +41,11 @@
 	$local_dir = "./" . $_GET['path'];
 	$files = scandir($local_dir);
 
-
-
 	// istrina is array 0 ir 1 elementus kurie yra tusti.
 	$files = array_diff($files, array('.','..','delete.php','upload.php','create.php','download.php','main.php'));
 	// surikiuoja array lista nuo 0 iki kiek yra failu
 	$files = array_values($files);
 
-
-	
 	//Spausdiname failus i tbody nusirodydami tr ir td
 	foreach($files as $files) {
 		print('<tr>');
@@ -62,7 +56,7 @@
 		}elseif(is_file($local_dir . $files)) {
 			print("<td>File</td>
 			<td>{$files}</td>
-			<td><form action='delete.php' method='POST'>
+			<td><form action='' method='POST'>
 			<input type='hidden' name='file_name' value='" . $_GET['path'] . $files . "'>
 			<input type='submit' name='delete_file' value= 'delete'>
 			</form>
@@ -89,7 +83,8 @@
 			<input id="submit" type="submit" value="Create">
 		</form>	
 		<!-- mygtukas file upload -->
-		<form action="upload.php" method="POST" enctype="multipart/form-data">
+		<?php require_once 'upload.php'; ?>
+		<form action="" method="POST" enctype="multipart/form-data">
 			<input type="file" name="file">
 			<input id="submit" type="submit" name="submitBtn" value="Upload">
 			

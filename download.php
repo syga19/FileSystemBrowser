@@ -20,8 +20,4 @@
     readfile($fileToDownloadEscaped);
     exit;
 }
-
-
-
-?>
 ?>

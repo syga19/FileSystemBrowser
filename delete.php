@@ -5,7 +5,4 @@
             unlink($file_name);
         }
     }
-    
-    header("location: main.php?deletesuccess");
-
 ?>
