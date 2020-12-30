@@ -1,8 +1,6 @@
 # File System Browser
-
-This is a simple webpage which allows you to walk through local directories or create them. Also you can download, delete or upload file. To see the files and directories it is necessary to log in.
-
-Technologies were used for this project: 
+This simple webpage allows you to create directories for your uploading files. Also the files can be deleted or downloaded by you. To manage your directories and files it is necessary to log in.
+For this project were used technologies:
 - PHP 7.3, 
 - SASS,
 - HTML.
@@ -10,11 +8,13 @@ Technologies were used for this project:
  
 
 ## How to run
-- Install ampps/wamp/xampp.
+- Install ampps/wamp/xampp in your computer. If you don't know how to install 'ampps' follow this link: https://www.ampps.com/wiki/Install
 
-- Download or clone this repository. In example: C:/Program Files/Ampps/www/mydirectory
+- Run ampps/wamp/xampp. 
 
-- Run ampps/wamp/xampp.
+- Download or clone this repository. 
+
+- Extract downloaded files and move to 'C:/Program Files/Ampps/www'. 
 
 - Go to browser using this link: http://localhost/simple-file-manager/
 
@@ -24,4 +24,4 @@ Login:
     Password: Paulikaite
     
     
-Now you should be able to see all the files and folders in  main directory.
+Now your are able to see all the files and directories.
