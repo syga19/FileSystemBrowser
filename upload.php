@@ -1,10 +1,8 @@
-
 <?php
 
 if(isset($_POST['submitBtn'])) 
         {
             // susikuriam temporary faila
-            $file = $_FILES['file'];
             $file_name = $_FILES['file']['name'];
             $file_size = $_FILES['file']['size'];
             $file_error = $_FILES['file']['error'];
@@ -19,7 +17,7 @@ if(isset($_POST['submitBtn']))
                 if ($file_error === 0) {
                     if ($file_size < 1000000) {
                         $file_name_new = uniqid('', true). "." . $file_actual_ext;
-                        $file_destination = '$files' . $file_name_new;
+                        $file_destination = $local_dir . $files . $file_name_new;
                         move_uploaded_file($file_tmp, $file_destination);
                         
                     } else {
@@ -32,6 +30,6 @@ if(isset($_POST['submitBtn']))
                 echo "You cannot upload files of this type!";
             }
         } 
-        header("location: main.php?deletesuccess");
+        header("location: main.php");
 
 ?>
