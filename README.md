@@ -14,10 +14,12 @@ Download or clone this repository. In example: C:/Program Files/Ampps/www/mydire
 
 Run ampps/wamp/xampp.
 
-Go to browser using this link: http://localhost/mydirectory/
+Go to browser using this link: http://localhost/simple-file-manager/
 
-Login using the following credentials:
+Login:
 
     Username: Sigita
     Password: Paulikaite
+    
+    
 Now you should be able to see all the files and folders in your main directory.
