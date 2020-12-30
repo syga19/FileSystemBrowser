@@ -16,7 +16,7 @@ For this project were used technologies:
 
 - Extract downloaded files and move to 'C:/Program Files/Ampps/www'. 
 
-- Go to browser using this link: http://localhost/simple-file-manager/
+- Go to browser using this link: http://localhost/FileSystemBrowser-main/
 
 Login:
 
